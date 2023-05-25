@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cruds</title>
+<link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="crud"> 
+<div class="head">
+<h1 class="titre">CRUDS</h1>
+<h3 class="soustitre">PRODUCT MANAGEMENT SYSTEM</h3>
+</div>
+<div class="inputs">
+<input type="text" id="title" class="title" placeholder="title">
+
+<div class="prices">
+<input onkeyup="getTotal()" type="number"  id="price" class="price" placeholder="price">
+<input onkeyup="getTotal()" type="number"  id="taxes"class="taxes" placeholder="taxes">
+<input onkeyup="getTotal()" type="number"id="ads" class="ads" placeholder="ads">
+<input onkeyup="getTotal()" type="number" id="discount"class="discount" placeholder="discount">
+
+<small  id="total" class="total"></small>
+
+</div>
+<input placeholder="count" type="number"  id="count" class="count">
+<input placeholder="categorie" type="text" id="categorie" class="categorie">
+<button id="submit" class="submit">Create</button>
+</div>
+<div class="outputs">
+<div class="searchBlock">
+
+<input onkeyup="searchData(this.value)" type="text" id="search" class="search" placeholder="search ">
+<div  class="searchby">
+    <button onclick="getsearchMood(this.id)" id="sbtitle" class="sbtitle">Search By Title</button>
+<button onclick="getsearchMood(this.id)" id="sbcategory" class="sbcategory" >Search By category</button>
+</div>
+
+
+<div id="deleteAll"></div>
+
+ <table >
+
+<tr>
+     <th>id</th>
+     <th>title</th>
+     <th>price</th>
+     <th>taxes</th>
+     <th>ads</th>
+     <th>discount</th>
+     <th>total</th>
+     <th>category</th>
+     <th>update</th>
+     <th>delete</th>
+</tr>
+<tbody id="tbody">
+</tbody > 
+</table> 
+
+<div>
+
+
+</div>
+    </div>
+
+
+<script src="shop.js"></script>
+
+</body>
+</html>
+
